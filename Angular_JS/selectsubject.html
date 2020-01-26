@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<p>Select a subject:</p>
+
+<select ng-model="selectedSubject">
+<option ng-repeat="x in subs" value="{{x.subject}}">{{x.subject}}</option>
+</select>  
+
+<h1>You selected: {{selectedSubject}}</h1>
+
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.subs = [
+        {subject : "web programming", color : "red"},
+        {subject : "apc", color : "white"},
+        {subject : "adbms", color : "black"}
+    ];
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>display subject detail</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script>
+		var app=angular.module("myapp",[]);
+		app.controller("myctrl",function($scope){
+			$scope.invisible=false;
+			$scope.show=function(){
+				$scope.invisible=true;
+			}
+			$scope.hide=function(){
+				$scope.invisible=false;
+			}
+		});
+	</script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+	<input type="button" ng-click="show()" value="Get details">
+	<br>
+	<div ng-show="invisible">
+		<h1>html</h1>
+		<h1>css</h1>
+		<h1>javascript</h1>
+		<h1>angular</h1>
+		<input type="button" ng-click="hide()" value="Brief">
+	</div>
+</body>
+</html>

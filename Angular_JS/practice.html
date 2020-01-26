@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	p {
+background: blue;
+color: white;
+}
+p.dbl {
+background: yellow;
+color: black;>
+}
+</style>
+  <meta charset="utf-8">
+  <title>Double click on paragraph to toggle background color</title>
+</head>
+<body>
+<p>Double-click here to change the background color.</p>
+</body>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+  	var pdbl = $( "p:first" );
+pdbl.dblclick(function() {
+  pdbl.toggleClass( "dbl" );
+});
+  </script>
+</html>

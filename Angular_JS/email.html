@@ -1,0 +1,30 @@
+
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+<body ng-app="">
+
+<p>Try writing in the input field:</p>
+
+<form name="myForm">
+<input type="email" name="myInput" ng-model="myInput">
+<input type="pass" name="mypass" ng-model="mypass" ng-minlength=5 ng-maxlength=10>
+</form>
+
+<span ng-show="myForm.myInput.$valid" ng-hide="myForm.myInput.$valid">email should be valid</span>
+<h1>{{myForm.myInput.$valid}}</h1>
+<h1>{{myForm.myInput.$invalid}}</h1>
+<h1>{{myForm.myInput.$dirty}}</h1>
+<h1>{{myForm.myInput.$pristine}}</h1>
+<h1>{{myForm.myInput.$touched}}</h1>
+<h1>{{myForm.myInput.$untouched}}</h1>
+
+<p>The input's valid password is:</p>
+<h1>{{myForm.mypass.$valid}}</h1>
+<h1>{{myForm.mypass.$invalid}}</h1>
+<h1>{{myForm.mypass.$dirty}}</h1>
+<h1>{{myForm.mypass.$pristine}}</h1>
+<h1>{{myForm.mypass.$touched}}</h1>
+<h1>{{myForm.mypass.$untouched}}</h1>
+
+</body>
+</html>

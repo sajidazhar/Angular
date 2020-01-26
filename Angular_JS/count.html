@@ -1,0 +1,13 @@
+<html ng-app="myModule">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="ang3.js"></script>
+</head>
+<body ng-app="myModule">
+	<div ng-controller="myController">
+		<button ng-click="count = count + 1" ng-init="count=0">count button</button>
+          <p>The button is clicked {{count}} times.</p>
+
+	</div>
+</body>
+</html>
