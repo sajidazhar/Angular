@@ -1,2 +1,2 @@
-# Aungular
+# Angular
 Basic angular code
